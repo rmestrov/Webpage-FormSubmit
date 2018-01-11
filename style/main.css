@@ -34,9 +34,24 @@
   margin-right: auto;
 }
 
-.sign-up {
-  background-color: #D6E9FE;
+.footer {
+  background-color: #4a4a4a;
+  color: white;
 }
+
+.footer-text {
+	width: 75%;
+	margin: 0 auto;
+    padding: 0;
+    overflow: hidden;
+	display: block;
+    color: #fff;
+    text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+
 
 .features {
 	width: 80%;
@@ -61,32 +76,36 @@
 	margin: 0 auto;
 }
 
-ul {
+.menu-text ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
 
-li {
+.menu-text li {
     float: left;
 }
 
-li a {
+.menu-text li a {
     display: block;
     color: white;
-    text-align: center;
+    text-align: right;
     padding: 28px 16px;
     text-decoration: none;
 	font-family: Arial, Helvetica, sans-serif;
     font-size: 22px;
 }
 
-li a:hover, .dropdown:hover {
+.menu-text li a:hover, .dropdown:hover {
     background-color: #008ab3;
 }
 
-li.right-menu .dropdown {
+li.right-menu {
+	float: right;
+}
+
+li .right-menu .dropdown {
     display: inline-block;
 }
 
@@ -97,19 +116,20 @@ li.right-menu .dropdown {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-
+	height: 35px;
 }
 
 .dropdown-content a {
     color: white;
     padding: 12px 16px;
     text-decoration: none;
+	text-align: right;
     display: block;
-    text-align: right;
 	background-color: #333;
+	height:20px;
 }
 
-.right-menu.dropdown:hover .dropdown-content {
+ .dropdown:hover .dropdown-content {
     display: block;
 }
 
@@ -129,6 +149,11 @@ li.right-menu .dropdown {
   .right-menu {
 	  display: none;
   }
+  
+  .footer {
+	  height: 119px;
+	  text-align: center;
+  }
 }
 
 /* Tablet Styles */
@@ -146,6 +171,19 @@ li.right-menu .dropdown {
   .right-menu {
 	  display: none;
   }
+  
+  .footer {
+	  height: 70px;
+  }
+  
+  .footer-text .year {
+	float: left;
+}
+
+.footer-text .copyright {
+	float: right;
+	list-style-type: none;
+}
   
 }
 
@@ -167,8 +205,8 @@ li.right-menu .dropdown {
 	  height: 250px;
   }
   
-  .sign-up {
-	  height: 200px;
+  .footer {
+	  height: 70px;
 	  order: 2;
   }
   
@@ -176,7 +214,7 @@ li.right-menu .dropdown {
 	  order: 1;
   }
 
-.right-menu {
+  .right-menu {
 	float: right;
 	color: white;
 	font-family: Arial, Helvetica, sans-serif;
@@ -185,4 +223,100 @@ li.right-menu .dropdown {
 	letter-spacing:0px;
 }
 
+.footer-text .year {
+	float: left;
 }
+
+.footer-text .copyright {
+	float: right;
+	list-style-type: none;
+}
+
+}
+
+
+.slider {
+  width: 100%;
+  overflow: hidden;
+  height: 250px;
+  position: relative;
+}
+
+.slider ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  width: 300%;
+  height: 100%;
+  top: 0;
+}
+
+.slider li {
+  padding: 0;
+  margin: 0;
+  width: 33.333333%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border: none;
+}
+
+.slider li img {
+  border: none;
+  width: 100%;
+  min-height: 100%;
+}
+
+.slider button {
+  position: absolute;
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  top: 0;
+  bottom: 0;
+  width: 20%;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align:center;
+  opacity: 0;
+  z-index: 2;
+}
+
+.slider button.prev {
+  left: 0;
+}
+
+.slider button.next {
+  right: 0;
+}
+
+.slider button:hover, .slider button:active {
+  opacity: 1.0;
+}
+
+.slider .content {
+  z-index: 3;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3em;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  line-height: 3em;
+  padding: 0 1em;
+  font-size: 1.5em;
+}
+
+.slider .content a {
+  color: inherit;
+}
+
+
