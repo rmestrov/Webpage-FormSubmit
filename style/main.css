@@ -99,6 +99,15 @@
   flex-wrap: wrap;
 }  
 
+.flex-item {
+  height: auto;
+  margin: 15px;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: left;
+}
 
 #content-img {
   width: 100%;
@@ -394,13 +403,6 @@ input[type=submit]:hover {
 
 .flex-item {
   width: 100%;
-  height: auto;
-  margin: 15px;
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: left;
 }
 
 #item-four {
@@ -421,17 +423,6 @@ input[type=submit]:hover {
 
 /* Tablet Styles */
 @media only screen and (min-width: 641px) and (max-width: 768px) {
-  .feature-1,
-  .feature-2,
-   {
-	  width: 50%;
-  }
-  
-  .feature-3,
-  {
-	  display: none;
-  }
-  
   .header {
 	  height: 250px;
   }
@@ -460,15 +451,9 @@ input[type=submit]:hover {
 }
 
 .flex-item {
-  width: 50%;
-  height: 500px;
-  margin: 15px;
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: left;
+  width: 44%;
 }
+
 
 #item-five {
   display: none;
@@ -478,7 +463,6 @@ input[type=submit]:hover {
 {
   display: none;
 }
-  
 }
 
 /* Desktop Styles */
@@ -486,13 +470,6 @@ input[type=submit]:hover {
   .page {
 	  width: 100%;
 	  margin: 0 auto;
-  }
-  
-  .feature-1,
-  .feature-2,
-  .feature-3 {
-	  width: 33.3%;
-	  align-items: center;
   }
   
   .header {
@@ -538,16 +515,8 @@ input[type=submit]:hover {
 	text-align: center;
 }
 
-
 .flex-item {
-  width: auto;
-  height: 500px;
-  margin: 15px;
-  line-height: 100px;
-  color: white;
-  font-weight: bold;
-  font-size: 2em;
-  text-align: left;
+  width: 30%;
 }
 
 }
