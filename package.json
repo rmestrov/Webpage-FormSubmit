@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bourbon": "^5.0.0",
+    "roboto-fontface": "^0.8.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.10.1"
   }

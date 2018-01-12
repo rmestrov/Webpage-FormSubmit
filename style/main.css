@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('node_modules/robto-fontface/fonts');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -65,25 +70,78 @@
     font-size: 16px;
 }
 
-
 .features {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
-	max-height: 1000px;
-	background-color: black;
+	height: auto;
+	margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
-.feature-1 {
-  background-color: #F5CF8E;
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  width: 100%;
 }
 
-.feature-2 {
-  background-color: #F09A9D;
+.wrap    { 
+  -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+}  
+
+
+#content-img {
+  width: 100%;
+  height: 236px;
 }
 
-.feature-3 {
-  background-color: #C8C6FA;
+.title {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:32px;
+  color:#4a4a4a;
+  letter-spacing:0px;
+  line-height:35px;
+}
+
+.content-text {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:22px;
+  color:#747474;
+  letter-spacing:0px;
+  line-height:34px;
+}
+
+.content-link {
+  font-family:Arial, Helvetica, sans-serif;
+  font-size:22px;
+  color:#00a1d1;
+  letter-spacing:0px;
+  line-height:34px;
+  text-decoration: none;
+}
+
+
+
+
+#send-message {
+  background-color: #b0b0b0;
+  width: 33%;
+  height: 60px;
+  margin: 0 auto;
+}
+
+#send-message:hover {
+  background-color: #333;
 }
 
 
@@ -303,6 +361,7 @@ input[type=submit]:hover {
 	height:202px;
 }
 
+
 /* Mobile Styles */
 @media only screen and (max-width: 640px) {
 	.feature-2,
@@ -331,6 +390,30 @@ input[type=submit]:hover {
 
 .slider {
 	height: 400px;
+}
+
+.flex-item {
+  width: 100%;
+  height: auto;
+  margin: 15px;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: left;
+}
+
+#item-four {
+  display: none;
+}
+
+#item-five {
+  display: none;
+}
+
+#item-six
+{
+  display: none;
 }
 
   
@@ -374,6 +457,26 @@ input[type=submit]:hover {
 .footer-text .copyright {
 	float: right;
 	list-style-type: none;
+}
+
+.flex-item {
+  width: 50%;
+  height: 500px;
+  margin: 15px;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: left;
+}
+
+#item-five {
+  display: none;
+}
+
+#item-six
+{
+  display: none;
 }
   
 }
@@ -435,8 +538,16 @@ input[type=submit]:hover {
 	text-align: center;
 }
 
+
+.flex-item {
+  width: auto;
+  height: 500px;
+  margin: 15px;
+  line-height: 100px;
+  color: white;
+  font-weight: bold;
+  font-size: 2em;
+  text-align: left;
 }
 
-
-
-
+}
