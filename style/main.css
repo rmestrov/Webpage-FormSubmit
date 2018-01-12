@@ -402,7 +402,7 @@ input[type=submit]:hover {
 }
 
 .flex-item {
-  width: 100%;
+  max-width: 100%;
 }
 
 #item-four {
@@ -451,7 +451,7 @@ input[type=submit]:hover {
 }
 
 .flex-item {
-  width: 44%;
+  max-width: 44%;
 }
 
 
@@ -516,7 +516,7 @@ input[type=submit]:hover {
 }
 
 .flex-item {
-  width: 30%;
+  max-width: 28%;
 }
 
 }
