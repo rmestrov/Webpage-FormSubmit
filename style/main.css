@@ -16,14 +16,28 @@
 
 .section {
   width: 100%;
-  height: 300px;
-  display: flex;
+ position: relative;
 }
 
 .menu {
   background-color: #00a1d1;
   height: 75px;
   width: 100%;
+  position: relative;
+}
+
+.flexnav{
+    -webkit-padding-start: 0px;
+    -webkit-margin-before: 0px;
+    -webkit-margin-after: 0px;
+    margin-top: 0px;
+    margin-right: auto;
+    margin-bottom: 0px;
+    margin-left: auto;
+    width:auto;
+    height: auto;
+    position: relative;
+    z-index: 1; 
 }
 
 .header {
@@ -54,7 +68,7 @@
 
 .footer {
   background-color: #4a4a4a;
-  color: white;
+  color: #fff;
 }
 
 .footer-text {
@@ -82,7 +96,7 @@
 
 .flex-container {
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   list-style: none;
   -ms-box-orient: horizontal;
   display: -webkit-box;
@@ -101,9 +115,9 @@
 
 .flex-item {
   height: auto;
-  margin: 15px;
+  margin: 0 auto;
   line-height: 100px;
-  color: white;
+  color: #fff;
   font-weight: bold;
   font-size: 2em;
   text-align: left;
@@ -139,9 +153,6 @@
   text-decoration: none;
 }
 
-
-
-
 #send-message {
   background-color: #b0b0b0;
   width: 33%;
@@ -173,7 +184,7 @@
 
 .menu-text li a {
     display: block;
-    color: white;
+    color: #fff;
     text-align: right;
     padding: 28px 16px;
     text-decoration: none;
@@ -222,6 +233,7 @@ li .right-menu .dropdown {
 
 #logo-text a {
 	font-size: 30px;
+  text-align: left;
 }
 
 .slider {
@@ -334,7 +346,7 @@ input[placeholder], textarea{
 
 input[type=submit] {
     background-color: #00a1d1;
-    color: white;
+    color: #fff;
 	width: 100%;
     height: 80px;
     border: none;
@@ -371,13 +383,119 @@ input[type=submit]:hover {
 }
 
 
+.logo {
+  position: relative;
+  padding: 25px;
+  width:15%;
+  font-size: 25px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  float: left;
+}
+
+nav {
+  position:absolute;
+  width:80%;
+  margin:0 auto;
+}
+
+#cssmenu, #cssmenu ul,
+#cssmenu ul li, #cssmenu ul li a,
+#cssmenu #head-mobile {
+  border:0;
+  list-style:none;
+  line-height:1;
+  display:block;
+  position:relative;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box
+}
+
+
+#cssmenu {
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#cssmenu > ul > li {
+  float: right;
+}
+
+#cssmenu > ul > li > a {
+  padding: 26px;
+  font-size: 22px;
+  letter-spacing: 0px;
+  text-decoration: none;
+  color:#fff;
+}
+
+#cssmenu > ul > li:hover > a,
+#cssmenu ul li.active a {
+  color:#fff
+}
+
+#cssmenu > ul > li:hover, #cssmenu ul li.active:hover,
+#cssmenu ul li.active, #cssmenu ul li.has-sub.active:hover {
+  background:#008ab3;
+}
+
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 20px;
+}
+
+#cssmenu > ul > li.has-sub:hover > a:before {
+  top:23px;
+  height:0;
+}
+
+#cssmenu ul ul {
+  position:absolute;
+  left:-9999px;
+}
+
+#cssmenu ul ul li {
+  height:0;
+  background:#333;
+  color: #fff;
+  -webkit-transition:all .25s ease;
+  -ms-transition:all .25s ease;
+  transition:all .25s ease
+}
+
+#cssmenu li:hover > ul {
+  left: auto;
+  right: 0;  
+}
+
+#cssmenu li:hover > ul > li {
+  height: auto;
+}
+
+#cssmenu ul ul li a {
+  padding:5px 15px;
+  min-width: 150px;
+  font-size: 18px;
+  text-decoration:none;
+  text-align: right;
+  color:#fff;
+  letter-spacing:0px;
+  line-height:36px;
+}
+
+#cssmenu ul ul li:last-child > a,
+#cssmenu ul ul li.last-item > a {
+  border-bottom: 0
+}
+
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li a:hover {
+  background-color: #008ab3;
+}
+
+
 /* Mobile Styles */
 @media only screen and (max-width: 640px) {
-	.feature-2,
-	.feature-3 {
-	  display: none;
-  }
- 
   .header {
 	  height: 400px;
   }
@@ -385,7 +503,11 @@ input[type=submit]:hover {
   .right-menu {
 	  display: none;
   }
-  
+
+  .menu {
+    height: auto;
+  }
+
   .footer {
 	  height: 119px;
 	  text-align: center;
@@ -418,13 +540,158 @@ input[type=submit]:hover {
   display: none;
 }
 
-  
+
+.logo {
+  position:relative;
+  left: 10px;
+  top: 15px;
+  width:100%;
+  height:75px;
+  text-align: left;
+  float:none;
+}
+
+nav {
+  width:100%;
+}
+
+#cssmenu {
+  width:100%;
+}
+
+#cssmenu a {
+  font-size: 35px;
+}
+
+#cssmenu ul {
+  width:100%;
+  display:none
+}
+
+#cssmenu ul li {
+  width:100%;
+  background-color: #333;
+  text-align: center;
+  color: #fff;
+}
+
+#cssmenu ul li:hover {
+  background:#333;
+}
+
+#cssmenu ul ul li,
+#cssmenu li:hover > ul > li {
+  height: auto;
+}
+
+#cssmenu ul ul li a {
+  text-align: center;
+}
+
+#cssmenu ul ul li:hover > a,
+#cssmenu ul ul li.active > a {
+  color:#008ab3;
+  background-color: #333;
+}
+
+#cssmenu ul ul {
+  position:relative;
+  left:0;
+  width:100%;
+  margin:0;
+}
+
+#cssmenu #head-mobile {
+  display:block;
+  padding:23px;
+  color:black;
+  font-size:12px;
+  font-weight:700
+}
+
+.button {
+  width:33px;
+  height:25px;
+  position:absolute;
+  right:26px;
+  top:25px;
+  cursor:pointer;
+}
+
+.button:after {
+  position:absolute;
+  top:23px;
+  right:26px;
+  display:block;
+  height:8px;
+  width:40px;
+  border-top:5px solid #fff;
+  border-bottom:5px solid #fff;
+  content:'';
+}
+
+.button:before {
+  -webkit-transition:all .3s ease;
+  -ms-transition:all .3s ease;
+  transition:all .3s ease;
+  position:absolute;
+  top:10px;
+  right:26px;
+  display:block;
+  height:5px;
+  width:40px;
+  background:#fff;
+  content:'';
+}
+
+.button.menu-opened:after {
+  -webkit-transition:all .3s ease;
+  -ms-transition:all .3s ease;
+  transition:all .3s ease;
+  top:33px;
+  border:0;
+  height:5px;
+  width:40px;
+  background:#fff;
+  -webkit-transform:rotate(45deg);
+  -moz-transform:rotate(45deg);
+  -ms-transform:rotate(45deg);
+  -o-transform:rotate(45deg);
+  transform:rotate(45deg)
+}
+
+.button.menu-opened:before {
+  top:33px;
+  background:#fff;
+  width:40px;
+  -webkit-transform:rotate(-45deg);
+  -moz-transform:rotate(-45deg);
+  -ms-transform:rotate(-45deg);
+  -o-transform:rotate(-45deg);
+  transform:rotate(-45deg)
+}
+
+#cssmenu .submenu-button {
+  position:absolute;
+  z-index:99;
+  right:0;
+  top:0;
+  display:block;
+  height:46px;
+  width:100%;
+  cursor:pointer
+}
+
 }
 
 /* Tablet Styles */
 @media only screen and (min-width: 641px) and (max-width: 768px) {
   .header {
 	  height: 250px;
+  }
+
+  .menu {
+    height: auto;
   }
   
   .right-menu {
@@ -463,6 +730,8 @@ input[type=submit]:hover {
 {
   display: none;
 }
+
+
 }
 
 /* Desktop Styles */
