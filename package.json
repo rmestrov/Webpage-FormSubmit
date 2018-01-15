@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server"
   },
   "author": "Ruzica Mestrovic",
   "license": "ISC",
@@ -13,5 +13,9 @@
     "roboto-fontface": "^0.8.0",
     "webpack": "^3.10.0",
     "webpack-dev-server": "^2.10.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.8",
+    "style-loader": "^0.19.1"
   }
 }
