@@ -35,7 +35,7 @@ multiTg = function() {
    else cssmenu.addClass('dropdown');
    if (settings.sticky === true) cssmenu.css('position', 'fixed');
 resizeFix = function() {
-  var mediasize = 640;
+  var mediasize = 768;
      if ($( window ).width() > mediasize) {
        cssmenu.find('ul').show();
      }
@@ -56,7 +56,4 @@ $("#cssmenu").menumaker({
 });
 });
 })(jQuery);
-
-
-
 
