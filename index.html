@@ -4,9 +4,6 @@
 		<meta charset='UTF-8'/>
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
 		<title>My beautiful page</title>
-		<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-		<script src="dist/bundle.js"></script>
-		<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 	</head>
 	
 	<body>
@@ -56,11 +53,11 @@
 				<div class="section contact-form">
 					<h2>Contact Form</h2>
 					<div class="container">
-						<form action="">
+						<form id="formSubmit" name="myForm" method="POST" action="http://www.slicestic.com/api/v1/fe-dev">
 							<label for="name">Contact name</label>
-							<input type="text" id="name" name="contactname" placeholder="Enter your name here">
+							<input type="text" id="name" name="name" placeholder="Enter your name here">
 							<label for="email">Email address</label>
-							<input type="text" id="email" name="emailaddress" placeholder="Enter your email here">
+							<input type="text" id="email" name="email" placeholder="Enter your email here">
 							<label for="message">Message</label>
 							<textarea id="message" name="message" placeholder="Write a message..."></textarea>
 							<input type="submit" id="submit" value="Send Message">
@@ -126,5 +123,8 @@
 				</ul>
 			</div>
 		</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.js"></script>
+	<script src="dist/bundle.js"></script>
+	<script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 	</body>
 </html>
