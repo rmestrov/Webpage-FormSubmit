@@ -58,8 +58,8 @@
 
 .flexnav:open {
   width: 50%;
-  position: fixed;
-  bottom: 0;
+  min-height: 100%;
+  
 }
 
 nav {
@@ -78,8 +78,10 @@ nav {
 
 #cssmenu ul {
   width:50%;
+  height: 100%;
   margin-right: 0;
 }
+
 
 #cssmenu ul li {
   width:100%;
@@ -115,7 +117,7 @@ nav {
 }
 
 #cssmenu #head-mobile {
-  display:block;
+  display:flex;
   padding:0;
   color:black;
   font-size:12px;
